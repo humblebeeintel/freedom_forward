@@ -67,16 +67,81 @@
     --bs-btn-active-border-color: #5a23c8;
   }
 
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
-
+  
   .logo {
     width: 50px;  
     height: 50px;
     padding: 5px;
+  }
+  
+  .col img {
+    width: 100%;
+    height: 225px;
+  }
+  
+  /* Toggle Switch CSS */
+  .toggle-control {
+    position: relative;
+    display: inline-block;
+    width: 120px; /* Adjust width here */
+    height: 68px; /* Adjust height here */
+  }
+  
+  .toggle-control input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .control {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0052a1; /* Blue color for Israel */
+    background-size: cover;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .control:before {
+    position: absolute;
+    content: "";
+    height: 60px; /* Adjust height here */
+    width: 60px; /* Adjust width here */
+    left: 4px; /* Adjust left position here */
+    bottom: 4px; /* Adjust bottom position here */
+    background-color: white;
+    background-image: url('../israel_bg-removebg.png'); /* Add path to Israel flag image */
+    background-size: cover;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .control {
+    background-color: #007a3d; /* Green color for Palestine */
+  }
+  
+  input:checked + .control:before {
+    left: calc(100% - 68px); /* Adjust this value to move the circle image to the right */
+    background-image: url('../palestine_crc.png'); /* Add path to Palestine flag image */
+  }
+
+  .show-more, .show-less {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #4a4a4a; /* Dark grey */
+  }
+  
+  /* Or, for a subtle color: */
+  
+  .show-more, .show-less {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #88a2aa; /* Soft blue */
   }
