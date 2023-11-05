@@ -472,3 +472,45 @@ function updateCards() {
 // Call updateCards when the page loads and when the toggle state changes
 updateCards();
 toggle.addEventListener('change', updateCards);
+
+const searchInput = document.querySelector('input[type="search"]');
+const searchButton = document.querySelector('.btn-view-more');
+
+function removeHighlights() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(function(card) {
+    card.innerHTML = card.innerHTML.replace(/<mark>(.*?)<\/mark>/gi, '$1');
+  });
+}
+
+searchInput.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    searchButton.click();
+  }
+});
+
+searchButton.addEventListener('click', function() {
+  removeHighlights();
+
+  const query = searchInput.value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+  let found = false;
+
+  cards.forEach(function(card) {
+    const text = card.textContent.toLowerCase();
+    if (text.includes(query)) {
+      found = true;
+      const regex = new RegExp(`(${query})`, 'gi');
+      card.innerHTML = card.innerHTML.replace(regex, '<mark>$1</mark>');
+      card.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  const noInfoMessage = document.getElementById('no-info-message');
+  if (!found) {
+    noInfoMessage.style.display = 'block';
+  } else {
+    noInfoMessage.style.display = 'none';
+  }
+});

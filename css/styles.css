@@ -1,147 +1,105 @@
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block;
+}
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
+.card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
+.card-body {
+  flex-grow: 1;
+}
 
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
 
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
+.col img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
 
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
+/* Toggle Switch CSS */
+.toggle-control {
+  position: relative;
+  display: inline-block;
+  width: 120px; 
+  height: 68px; 
+}
 
-  .btn-bd-primary {
-    --bd-violet-bg: #712cf9;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+.toggle-control input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
-  }
+.control {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0052a1; /* Blue color for Israel */
+  background-size: cover;
+  transition: 0.4s;
+  border-radius: 34px;
+}
 
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-  
-  .logo {
-    width: 50px;  
-    height: 50px;
-    padding: 5px;
-  }
-  
-  .col img {
-    width: 100%;
-    height: 225px;
-  }
-  
-  /* Toggle Switch CSS */
-  .toggle-control {
-    position: relative;
-    display: inline-block;
-    width: 120px; /* Adjust width here */
-    height: 68px; /* Adjust height here */
-  }
-  
-  .toggle-control input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .control {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0052a1; /* Blue color for Israel */
-    background-size: cover;
-    transition: .4s;
-    border-radius: 34px;
-  }
-  
-  .control:before {
-    position: absolute;
-    content: "";
-    height: 60px; /* Adjust height here */
-    width: 60px; /* Adjust width here */
-    left: 4px; /* Adjust left position here */
-    bottom: 4px; /* Adjust bottom position here */
-    background-color: white;
-    background-image: url('../israel_bg-removebg.png'); /* Add path to Israel flag image */
-    background-size: cover;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .control {
-    background-color: #007a3d; /* Green color for Palestine */
-  }
-  
-  input:checked + .control:before {
-    left: calc(100% - 68px); /* Adjust this value to move the circle image to the right */
-    background-image: url('../palestine_crc.png'); /* Add path to Palestine flag image */
-  }
+.control:before {
+  position: absolute;
+  content: "";
+  height: 60px; /* Adjust height here */
+  width: 60px; /* Adjust width here */
+  left: 4px; /* Adjust left position here */
+  bottom: 4px; /* Adjust bottom position here */
+  background-color: white;
+  background-image: url("../israel_bg-removebg.png"); /* Add path to Israel flag image */
+  background-size: cover;
+  transition: 0.4s;
+  border-radius: 50%;
+}
 
-  .show-more, .show-less {
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #4a4a4a; /* Dark grey */
+input:checked + .control {
+  background-color: #007a3d; /* Green color for Palestine */
+}
+
+input:checked + .control:before {
+  left: calc(
+    100% - 68px
+  ); /* Adjust this value to move the circle image to the right */
+  background-image: url("../palestine_crc.png"); /* Add path to Palestine flag image */
+}
+
+.show-more,
+.show-less {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #4a4a4a; /* Dark grey */
+}
+
+/* Or, for a subtle color: */
+
+.show-more,
+.show-less {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #88a2aa; /* Soft blue */
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
-  
-  /* Or, for a subtle color: */
-  
-  .show-more, .show-less {
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #88a2aa; /* Soft blue */
-  }
+}
+
