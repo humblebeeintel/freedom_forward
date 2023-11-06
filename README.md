@@ -1,8 +1,10 @@
 # Project Name
 
+Hope for Palestine
+
 ## Description
 
-This project is a web application that allows users to view and search through a collection of cards. Each card contains an image and some text. Users can click on a "Show more" link to view additional text for each card. The application is built with HTML, CSS, and JavaScript.
+This website aims to raise awareness about the ongoing injustices and occupation faced by Palestinians. It contains information on companies and nations enabling the oppression, as well as those advocating for Palestinian human rights. Our mission is to empower readers to join the Palestinian struggle through ethical consumerism, activism, and nonviolent resistance. By inspiring social and economic pressure, we can help bring justice, freedom, and equal rights for all. Together, our collective voices can transcend divides and barriers to demand Palestinian liberation.
 
 ## Features
 
