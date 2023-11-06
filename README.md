@@ -26,8 +26,7 @@ To start the application, run `npm start` from the command line in the project d
 
 ## Contributing
 
-Contributions are welcome! Please read the [contributing guide](CONTRIBUTING.md) to learn how to contribute to this project.
+## Contributors
 
-## License
+- [@habibullo-dev](https://github.com/habibullo-dev)
 
-This project is licensed under the terms of the [MIT License](LICENSE.md).
