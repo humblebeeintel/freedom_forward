@@ -1,5 +1,4 @@
 let cardsShown = 9;
-
 // Selectors
 const toggle = document.querySelector('.toggle-control input');
 const viewMoreBtn = document.querySelector('.view-more-btn');

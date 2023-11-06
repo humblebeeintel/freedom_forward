@@ -64,7 +64,7 @@
   left: 4px; /* Adjust left position here */
   bottom: 4px; /* Adjust bottom position here */
   background-color: white;
-  background-image: url("../israel_bg-removebg.png"); /* Add path to Israel flag image */
+  background-image: url("../images/israel_bg-removebg.png"); /* Add path to Israel flag image */
   background-size: cover;
   transition: 0.4s;
   border-radius: 50%;
@@ -78,7 +78,7 @@ input:checked + .control:before {
   left: calc(
     100% - 68px
   ); /* Adjust this value to move the circle image to the right */
-  background-image: url("../palestine_crc.png"); /* Add path to Palestine flag image */
+  background-image: url("../images/palestine_crc.png"); /* Add path to Palestine flag image */
 }
 
 .show-more,
